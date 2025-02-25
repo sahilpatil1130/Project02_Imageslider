@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("brick-wall-with-spot-lights-background_52683-42882.avif");
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.slider {
+    width: 30%;
+    max-width: 800px;
+    height: 100vh;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    transition: margin-left 0.6s;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide .discription {
+    
+    margin-top: -110px;
+}
+
+.discription p{
+    color: #87b9f7;
+    font-size: large;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 32%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.manual-btn {
+    border: 2px solid rgb(73, 57, 244);
+    padding: 10px;
+    border-radius: 10px;
+    cursor:pointer;
+    transition: 0.6s;
+}
+.slide a{
+    text-decoration: none;
+}
+
+h1{
+    color: rgb(245, 157, 57);
+}
+
+p{
+    color: white;
+}
+.manual-btn:hover{
+    border: 2px solid rgb(146, 181, 250);
+    transition: 0.6s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+@media (max-width: 794px) {
+    .slider {
+        width: 40%;
+        max-width: 90%;
+        max-height: 300px;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .discription p{
+        font-size: 0.9rem;
+    }
+
+    .manual-btn {
+        padding: 6px;
+    }
+    .slide .discription {
+        margin-top: -100px;
+    }
+    body{
+        background-size:cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        width: 80%;
+        max-width: 500px;
+        
+        max-height: 300px;
+    }
+
+    .slide .discription {
+        bottom: 1px;
+        left: 1px;
+        padding: 1px;
+        margin-top: -80px;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+
+    .discription p {
+        font-size: 12px;
+    }
+
+    .navigation-manual {
+        position: absolute;
+        width: 75%;
+        max-width: 800px;
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    
+    .manual-btn {
+        padding: 5px;
+    }
+
+    body{
+        background-size:cover;
+    }
+}
